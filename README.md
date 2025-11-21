@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/AppleScript%20Inside%20Button.png" alt="Made on Macintosh" width="88" height="31" hspace="2">
+  <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/Google%20Voice%20Beta%20Button%20v2.png" alt="AppleScript Inside" width="88" height="31" hspace="2">
+  <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/macmade2.gif" alt="Google Voice" width="88" height="31" hspace="2">
+</p>
+
+
 # Google Voice Keepalive for macOS
 
 This project keeps your Google Voice numbers active on macOS. It sends one outgoing text message from each Google Voice account on a schedule. Google requires some activity every 90 days. Sending one text is enough to keep a number active.
