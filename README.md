@@ -2,6 +2,7 @@
   <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/AppleScript%20Inside%20Button.png" alt="Made on Macintosh" width="88" height="31" hspace="2">
   <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/Google%20Voice%20Beta%20Button%20v2.png" alt="AppleScript Inside" width="88" height="31" hspace="2">
   <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/macmade2.gif" alt="Google Voice" width="88" height="31" hspace="2">
+  <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/Meatwad%20Button%20v2.png" alt="Google Voice" width="88" height="31" hspace="2">
 </p>
 
 
