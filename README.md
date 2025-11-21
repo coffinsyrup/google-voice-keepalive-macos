@@ -104,7 +104,7 @@ Save the file after making changes.
 Run the app once manually.
 macOS will ask for Accessibility and Automation permissions. Approve them.
 
----
+
 
 
 ## Step 5: Schedule It in Apple Calendar
