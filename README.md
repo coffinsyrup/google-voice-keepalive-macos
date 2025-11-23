@@ -14,7 +14,7 @@
 </p>
 
 
-#Google Voice Keepalive for macOS
+# Google Voice Keepalive for macOS
 
 This tool keeps your Google Voice numbers active by sending a small automated message on a schedule. The system uses AppleScript, Google Chrome, and Apple Calendar on macOS.
 
@@ -24,7 +24,7 @@ This project supports multiple accounts. You can generate individual keepalive a
 
 ---
 
-###How It Works
+### How It Works
 
 1. You create one Google Chrome profile per Google Voice account.
 2. You get the direct URL for a conversation in Google Voice.
@@ -36,7 +36,7 @@ When the scheduled time arrives, the app opens Chrome, loads the Google Voice co
 
 ---
 
-###Features
+### Features
 
 * Automatic keepalive messages for Google Voice
 * Works with multiple Google accounts
@@ -49,7 +49,7 @@ When the scheduled time arrives, the app opens Chrome, loads the Google Voice co
 
 ---
 
-###Requirements
+### Requirements
 
 * macOS
 * Google Chrome
@@ -58,7 +58,7 @@ When the scheduled time arrives, the app opens Chrome, loads the Google Voice co
 
 ---
 
-#Setup Wizard (Recommended)
+## Setup Wizard (Recommended)
 
 The easiest way to create your keepalive apps is to use the Setup Wizard.
 
@@ -80,7 +80,7 @@ The easiest way to create your keepalive apps is to use the Setup Wizard.
 
 ---
 
-# First Run Permissions (Important)
+## First Run Permissions (Important)
 
 The first time you run each exported keepalive app, macOS will ask for the following permissions:
 
