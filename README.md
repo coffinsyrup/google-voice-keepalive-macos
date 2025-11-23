@@ -24,7 +24,7 @@ This project supports multiple accounts. You can generate individual keepalive a
 
 ---
 
-### How It Works
+###How It Works
 
 1. You create one Google Chrome profile per Google Voice account.
 2. You get the direct URL for a conversation in Google Voice.
@@ -49,7 +49,7 @@ When the scheduled time arrives, the app opens Chrome, loads the Google Voice co
 
 ---
 
-### Requirements
+###Requirements
 
 * macOS
 * Google Chrome
@@ -58,7 +58,7 @@ When the scheduled time arrives, the app opens Chrome, loads the Google Voice co
 
 ---
 
-# Setup Wizard (Recommended)
+#Setup Wizard (Recommended)
 
 The easiest way to create your keepalive apps is to use the Setup Wizard.
 
