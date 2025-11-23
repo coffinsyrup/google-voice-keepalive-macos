@@ -5,6 +5,14 @@
   <img src="https://raw.githubusercontent.com/coffinsyrup/google-voice-keepalive-macos/refs/heads/main/badges/Meatwad%20Button%20v2.png" alt="Google Voice" width="88" height="31" hspace="2">
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/macOS-compatible-brightgreen" />
+  <img src="https://img.shields.io/badge/AppleScript-supported-blue" />
+  <img src="https://img.shields.io/badge/Google%20Voice-keepalive-yellow" />
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
+  <img src="https://img.shields.io/github/v/release/coffinsyrup/google-voice-keepalive-macos" />
+</p>
+
 
 # Google Voice Keepalive for macOS
 
