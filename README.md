@@ -14,11 +14,13 @@
 </p>
 
 
-# Google Voice Keepalive for macOS
+#Google Voice Keepalive for macOS
 
-This project keeps your Google Voice numbers active on macOS. It sends one outgoing text message from each Google Voice account on a schedule. Google requires some activity every 90 days. Sending one text is enough to keep a number active.
+This tool keeps your Google Voice numbers active by sending a small automated message on a schedule. The system uses AppleScript, Google Chrome, and Apple Calendar on macOS.
 
-Everything runs locally on your Mac. No cloud services. No external automation tools.
+Google requires active use for each Google Voice number. If you do not call, text, or answer calls for about 90 days, the number can be reclaimed. This tool prevents that by sending automated keepalive messages.
+
+This project supports multiple accounts. You can generate individual keepalive apps for each Google Voice number you own.
 
 ---
 
@@ -34,131 +36,89 @@ When the scheduled time arrives, the app opens Chrome, loads the Google Voice co
 
 ---
 
+###Features
+
+* Automatic keepalive messages for Google Voice
+* Works with multiple Google accounts
+* Uses Chrome profiles
+* Simple Setup Wizard with dialogs
+* Calendar based scheduling
+* No server or cloud needed
+* Everything runs locally
+* Open source and free
+
+---
+
 ### Requirements
 
 * macOS
 * Google Chrome
-* Script Editor (included in macOS)
-* Apple Calendar (included in macOS)
+* Apple Calendar
 * One Chrome profile for each Google Voice account you want to maintain
 
 ---
 
+# Setup Wizard (Recommended)
 
+The easiest way to create your keepalive apps is to use the Setup Wizard.
 
+1. Open `GV-Setup-Wizard.app`
+2. Choose how many accounts you want to configure
+3. Enter a short name for each account (for example HOME, WORK, SPARE)
+4. Enter the Chrome profile directory for each account
 
-## Step 1: Create Chrome Profiles
-
-1. Open Google Chrome.
-2. Click your profile icon in the top right.
-3. Create one profile for each Google Voice account.
-4. Log in to each account in its own profile.
-
-Find the internal Chrome profile name:
-
-1. Open each Chrome profile.
-2. Visit:
-   `chrome://version`
-3. Look for the line called Profile Path.
-4. At the end of the path, you will see something like:
-
-   * Default
-   * Profile 1
-   * Profile 2
-     Write down the exact folder name for each profile.
-
-
-
-
-## Step 2: Get the Google Voice Conversation URL
-
-1. Open Chrome with the Google Voice profile you want to automate.
-2. Go to:
-   [https://voice.google.com/messages](https://voice.google.com/messages)
-3. Start a conversation with your own number or another number you control.
-4. Send at least one message manually.
-5. Open that conversation.
-6. Copy the full URL from the address bar. It contains an itemId value.
-   This URL will be used in the script.
-
-
-
-
-## Step 3: Use the Template Script
-
-Your repository contains this file:
-
-```
-src/gv_keepalive_template.applescript
-```
-
-Open it in Script Editor.
-Edit the values in the CONFIGURATION section:
-
-* profileDirectory
-* conversationURL
-* accountTag (optional label so you can see which account sent the message)
-
-Save the file after making changes.
-
-
-
-
-## Step 4: Export the Script as an Application
-
-1. In Script Editor, click File.
-2. Click Export.
-3. File Format: Application
-4. Save the file as something like:
-
-   * Home-GV-keepalive.app
-   * Work-GV-keepalive.app
-5. Uncheck Stay open after run handler.
-6. Leave Run Only unchecked.
-7. Save the file.
-
-Run the app once manually.
-macOS will ask for Accessibility and Automation permissions. Approve them.
-
-
-
-
-## Step 5: Schedule It in Apple Calendar
-
-1. Open Calendar on macOS.
-2. Create a new event.
-3. Set the event to repeat monthly.
-4. Click Alert.
-5. Select Custom.
-6. Choose Open File.
-7. Select your keepalive .app file.
-8. Set it to run at the time of the event.
-9. Pick a time when your Mac is awake or plugged in.
-
-Repeat the process for each Google Voice account.
+   * Open Chrome
+   * Go to `chrome://version`
+   * Look for “Profile Path”
+   * Use only the last part (Default, Profile 1, Profile 2, etc)
+   
+5. Paste the Google Voice conversation URL for each number
+6. The wizard generates a custom AppleScript file for each account
+7. Open each generated file in Script Editor
+8. Export each script as an Application
+9. Add each app to Apple Calendar with a repeating schedule
 
 ---
 
-### Security
+# First Run Permissions (Important)
 
-Everything runs on your Mac only.
-Nothing is uploaded or shared with third parties.
-Your Google login stays inside Chrome profiles.
-The script only performs simple actions inside Google Voice.
+The first time you run each exported keepalive app, macOS will ask for the following permissions:
+
+#### Accessibility
+
+Needed so the app can type the message and press Return inside Google Chrome.
+
+#### Automation
+
+Needed so the app can tell Chrome to open Google Voice and load the correct conversation.
+
+#### Input Monitoring (sometimes)
+
+May appear on certain versions of macOS. This is also related to keyboard automation.
+
+These permissions are required for the automation to work. The keepalive apps do not read your personal files and do not send data anywhere. Everything happens locally on your Mac inside your own Chrome window.
 
 ---
 
-### Troubleshooting
+## Creating the Calendar Automation
 
-If Chrome loads slowly, increase the delay values in the script.
+1. Open Calendar
+2. Create a new event
+3. Set it to repeat every 60 days (or any interval under 90 days)
+4. Add an alert
+5. Choose “Open file”
+6. Select the exported keepalive app
+7. Save the event
 
-If typing fails, make sure the exported app has permission in:
-System Settings → Privacy and Security → Accessibility
-and
-System Settings → Privacy and Security → Automation
+Repeat this step for each Google Voice account.
 
-If your conversation URL changes, update the script.
+---
 
-If your Chrome profile name changes, update the profileDirectory value.
+## Notes
+
+* Each account needs its own exported keepalive app
+* Each app needs its own Calendar event
+* Do not close Chrome too quickly while the script runs
+* Make sure each account’s Chrome profile stays signed in
 
 ---
