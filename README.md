@@ -84,15 +84,15 @@ The easiest way to create your keepalive apps is to use the Setup Wizard.
 
 The first time you run each exported keepalive app, macOS will ask for the following permissions:
 
-#### Accessibility
+### Accessibility
 
 Needed so the app can type the message and press Return inside Google Chrome.
 
-#### Automation
+### Automation
 
 Needed so the app can tell Chrome to open Google Voice and load the correct conversation.
 
-#### Input Monitoring (sometimes)
+### Input Monitoring (sometimes)
 
 May appear on certain versions of macOS. This is also related to keyboard automation.
 
